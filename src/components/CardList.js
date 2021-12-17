@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Card from './Card';
 
-export default function CardList() {
+const CardList =(props) =>{
+   
     return (
         <div>
-            
+            {props.users.map(user=> <Card {...user} key={user.id}/>)}
         </div>
     )
 }
+
+export default CardList;
